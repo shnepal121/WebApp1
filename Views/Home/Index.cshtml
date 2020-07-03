@@ -1,0 +1,25 @@
+﻿@model DIS_MOdels;
+
+@{
+    int x = 2;
+    int y = 5;
+    int sum = x + y;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @sum
+
+    @Model.Firstname
+    @Model.Lastname
+
+    <title>Index</title>
+</head>
+<body>
+    <h2>Hello world!</h2>
+    <a asp-action="contact">Contact Now</a>
+</body>
+</html>

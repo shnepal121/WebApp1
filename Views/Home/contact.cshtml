@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model GuestContact;
+
+
+<p> Hello Guest Please Enter the Details Below.</p>
+
+
+<p> name: @Model.Name</p>
+<p> Email: @Model.Email</p>
+<p> Phone: @Model.Phone</p>
+
+
+<form asp-controller="Home" asp-action="contact" method="post">
+    <p> 
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+    </p>
+
+    <p> Email: <input asp-for="Email" /></p>
+    <p> Phone Number: <input asp-for="Phone" /></p>
+
+    <p> Gender: <select asp-for="Gender">
+                <option value ="">Choose Gender</option>
+                <option value="True">Male</option>
+                <option value="False">Female</option>
+                </select>
+    </p>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+<a asp-controller="Home" asp-action="Index" asp-route-id="12">Home Page</a>

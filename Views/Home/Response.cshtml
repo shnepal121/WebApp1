@@ -1,0 +1,29 @@
+﻿@Model GuestContact;
+
+@{
+    ViewData["Title"] = "Response";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thank you for Providing the Information.</title>
+</head>
+<body>
+
+    <p>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.Gender == true)
+        {
+            @:We have Male attending. 
+        }
+        else
+        {
+            @:We have Female attending. 
+        }
+    </p>
+
+    <p>Click <a asp-action="Information">here</a> Information of Peole.</p>
+
+</body>
+</html>
+
