@@ -58,6 +58,9 @@ namespace WebApp1.Controllers
         {
             //Repository.AddResponse(contact);
             //return View(Repository.responses);
+            char[] arr = contact.Name.ToCharArray();
+            Array.Reverse(arr);
+            contact.Name = new string(arr);
             return View(contact);
         }
     }
